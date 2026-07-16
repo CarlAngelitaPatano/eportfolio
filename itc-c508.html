@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="ITC-C508 (Elective 4) course records of Carl Angelo Patano: exercises, activities, and outputs." />
   <title>ITC-C508 Course Records | Carl Angelo Patano</title>
+  <meta property="og:title" content="ITC-C508 Course Records | Carl Angelo Patano" />
+  <meta property="og:description" content="Course records for ITC-C508 (Elective 4): exercises, activities, and outputs." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -36,6 +43,9 @@
           (Elective 4). Exercises, activities, and outputs for the course are posted here
           as they are completed.
         </p>
+        <div class="cta-row" style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="https://github.com/CarlAngelitaPatano/eportfolio/upload/main/works" target="_blank" rel="noopener">&#8679; Upload Work File</a>
+        </div>
       </div>
     </header>
 
@@ -44,42 +54,7 @@
       <div class="container">
         <h2 class="section-title" id="records-title">Exercises &amp; Activities</h2>
         <p class="section-sub">Documented submissions and work products for ITC-C508.</p>
-        <div class="cards-grid">
-          <article class="card">
-            <div class="card-body">
-              <span class="card-meta">Written Work &middot; WW-P1</span>
-              <h3>Creating My ePortfolio</h3>
-              <p>
-                Designed and launched this ePortfolio as a workspace and record of my academic
-                learning for ITC-C508. The design follows the course rubric criteria for
-                navigation, usability and accessibility, writing conventions, and multimedia
-                elements. The required Course Expectations section is posted on the landing page.
-              </p>
-              <a class="card-link" href="index.html#expectations">View Course Expectations &rarr;</a>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-body">
-              <span class="card-meta">Upcoming</span>
-              <h3>Next Exercise</h3>
-              <p>
-                This space is reserved for the next ITC-C508 exercise or activity. Records will
-                be posted here as they are completed, including descriptions, reflections, and
-                links to related artifacts.
-              </p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-body">
-              <span class="card-meta">Upcoming</span>
-              <h3>Future Activities</h3>
-              <p>
-                Additional course outputs such as laboratory exercises, written works, and
-                performance tasks will be documented in this section throughout the semester.
-              </p>
-            </div>
-          </article>
-        </div>
+        <div class="cards-grid" id="recordsGrid"></div>
       </div>
     </section>
   </main>
@@ -98,5 +73,45 @@
       <p>&copy; 2026 Carl Angelo Patano &middot; ePortfolio for ITC-C508 (Elective 4)</p>
     </div>
   </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">&uarr;</button>
+
+  <script src="records.js"></script>
+  <script>
+    // Render records from records.js
+    const grid = document.getElementById("recordsGrid");
+    RECORDS.forEach(r => {
+      const card = document.createElement("article");
+      card.className = "card";
+      card.innerHTML =
+        '<div class="card-body">' +
+          '<span class="card-meta">' + r.tag + '</span>' +
+          '<h3>' + r.title + '</h3>' +
+          (r.date ? '<p style="color:var(--accent-2);font-size:.85rem;margin:0;">' + r.date + '</p>' : '') +
+          '<p>' + r.description + '</p>' +
+          (r.link ? '<a class="card-link" href="' + r.link + '">' + r.linkText + '</a>' : '') +
+        '</div>';
+      grid.appendChild(card);
+    });
+    // Placeholder card for upcoming work
+    const up = document.createElement("article");
+    up.className = "card";
+    up.innerHTML = '<div class="card-body"><span class="card-meta">Upcoming</span><h3>Future Activities</h3><p>Additional course outputs such as laboratory exercises, written works, and performance tasks will be documented here throughout the semester.</p></div>';
+    grid.appendChild(up);
+  </script>
+  <script>
+    // Scroll reveal
+    const revealTargets = document.querySelectorAll(".card, .section-title, .section-sub");
+    revealTargets.forEach(el => el.classList.add("reveal"));
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealTargets.forEach(el => io.observe(el));
+
+    // Back to top
+    const toTop = document.getElementById("toTop");
+    window.addEventListener("scroll", () => toTop.classList.toggle("show", window.scrollY > 500), { passive: true });
+    toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  </script>
 </body>
 </html>

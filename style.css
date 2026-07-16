@@ -202,3 +202,62 @@ footer .footer-links a:hover { color: var(--accent); }
   .nav-links { gap: .9rem; font-size: .9rem; }
   section { padding: 3rem 0; }
 }
+
+/* ============================================
+   Professional polish
+   ============================================ */
+
+body { font-family: "Inter", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; }
+
+::selection { background: rgba(56,189,248,.35); }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* Nav underline animation */
+.nav-links a { position: relative; padding-bottom: 3px; }
+.nav-links a::after {
+  content: ""; position: absolute; left: 0; bottom: 0;
+  width: 0; height: 2px; background: var(--gradient);
+  transition: width .25s ease;
+}
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+.nav-links a.active { border-bottom: none; }
+
+/* Hero chips */
+.hero-chips { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; margin-top: 1.1rem; }
+.chip {
+  font-size: .82rem; font-weight: 600; color: var(--accent);
+  background: rgba(56,189,248,.08); border: 1px solid rgba(56,189,248,.3);
+  padding: .3rem .9rem; border-radius: 999px;
+}
+
+/* Card & section depth */
+.card, .skill-card, .qa-block, .contact-card { box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+.card:hover { box-shadow: 0 14px 34px rgba(56,189,248,.12); }
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* Back to top */
+.to-top {
+  position: fixed; right: 1.4rem; bottom: 1.4rem; z-index: 60;
+  width: 46px; height: 46px; border-radius: 50%;
+  background: var(--gradient); color: #04121d; border: none;
+  font-size: 1.25rem; font-weight: 800; cursor: pointer;
+  box-shadow: 0 8px 22px rgba(56,189,248,.35);
+  opacity: 0; pointer-events: none; transform: translateY(10px);
+  transition: opacity .3s, transform .3s;
+}
+.to-top.show { opacity: 1; pointer-events: auto; transform: none; }
+.to-top:hover { transform: translateY(-3px); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #263149; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #38bdf8; }

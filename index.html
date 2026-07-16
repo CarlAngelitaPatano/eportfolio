@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="ePortfolio of Carl Angelo Patano, 4th Year BSIT student. Academic projects, skills, and ITC-C508 course records." />
   <title>Carl Angelo Patano | ePortfolio</title>
+  <meta property="og:title" content="Carl Angelo Patano | ePortfolio" />
+  <meta property="og:description" content="4th Year BSIT student. Projects, skills, and ITC-C508 course records." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/profile.jpg" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -33,6 +41,11 @@
         <img class="avatar" src="assets/profile.jpg" alt="Portrait of Carl Angelo Patano" />
         <h1>Hi, I'm <span>Carl Angelo Patano</span></h1>
         <p class="tagline">4th Year BS Information Technology Student &middot; Aspiring IT Professional</p>
+        <div class="hero-chips">
+          <span class="chip">BSIT &middot; 4th Year</span>
+          <span class="chip">Web Developer</span>
+          <span class="chip">ITC-C508 &middot; Elective 4</span>
+        </div>
         <div class="cta-row">
           <a class="btn btn-primary" href="itc-c508.html">View ITC-C508 Records</a>
           <a class="btn btn-outline" href="#contact">Get in Touch</a>
@@ -268,5 +281,38 @@
       <p>&copy; 2026 Carl Angelo Patano &middot; ePortfolio for ITC-C508 (Elective 4)</p>
     </div>
   </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">&uarr;</button>
+
+  <script>
+    // Scroll reveal
+    const revealTargets = document.querySelectorAll(".card, .skill-card, .qa-block, .contact-card, .section-title, .section-sub, .about-grid");
+    revealTargets.forEach(el => el.classList.add("reveal"));
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealTargets.forEach(el => io.observe(el));
+
+    // Scrollspy: highlight nav link of section in view
+    const sections = document.querySelectorAll("section[id], header.hero");
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"], .nav-links a[href="index.html"]');
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const id = e.target.id;
+          navLinks.forEach(a => {
+            const href = a.getAttribute("href");
+            a.classList.toggle("active", href === "#" + id || (!id && href === "index.html"));
+          });
+        }
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+    sections.forEach(s => spy.observe(s));
+
+    // Back to top
+    const toTop = document.getElementById("toTop");
+    window.addEventListener("scroll", () => toTop.classList.toggle("show", window.scrollY > 500), { passive: true });
+    toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  </script>
 </body>
 </html>
