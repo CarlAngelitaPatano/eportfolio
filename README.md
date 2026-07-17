@@ -19,8 +19,8 @@ A static ePortfolio site. No build step needed — just HTML, CSS, and SVG asset
    public by default. Submit this URL to the ITC-C508 submission folder.
 
 ## Before submitting — personalize it
-- Replace `assets/avatar.svg` and `assets/about.svg` with your real photos
-  (keep the same filenames, or update the `src` in the HTML).
+- Replace `assets/profile.jpg` with your real photo (keep the same filename,
+  or update the `src` in the HTML).
 - Fill in your real projects in the Projects section (`index.html`).
 - Update the GitHub link in the Contact section.
 - **Important:** Review the Course Expectations answers and rewrite them in your own

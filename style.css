@@ -24,7 +24,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
   line-height: 1.7;
 }
 
@@ -89,10 +89,10 @@ a:hover { text-decoration: underline; }
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .hero .tagline { color: var(--muted); font-size: 1.15rem; margin-top: .75rem; }
-.hero .cta-row { margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.cta-row { margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 .btn {
-  display: inline-block; padding: .75rem 1.6rem; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: .5rem; padding: .75rem 1.6rem; border-radius: 999px;
   font-weight: 600; font-size: .95rem; transition: transform .2s, box-shadow .2s;
 }
 .btn:hover { text-decoration: none; transform: translateY(-2px); }
@@ -166,7 +166,7 @@ section:nth-of-type(even) { background: var(--bg-alt); }
   background: var(--card); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 1.8rem 1.2rem;
 }
-.contact-card .icon { font-size: 1.8rem; margin-bottom: .6rem; }
+.contact-card .icon { margin-bottom: .6rem; color: var(--accent); }
 .contact-card h3 { font-size: 1rem; margin-bottom: .3rem; }
 .contact-card p, .contact-card a { font-size: .92rem; color: var(--muted); word-break: break-word; }
 .contact-card a:hover { color: var(--accent); }
@@ -206,8 +206,6 @@ footer .footer-links a:hover { color: var(--accent); }
 /* ============================================
    Professional polish
    ============================================ */
-
-body { font-family: "Inter", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; }
 
 ::selection { background: rgba(56,189,248,.35); }
 
@@ -261,3 +259,27 @@ body { font-family: "Inter", "Segoe UI", system-ui, -apple-system, Roboto, Arial
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: #263149; border-radius: 8px; }
 ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
+                                                           
+/* ============================================
+   Readability improvements
+   ============================================ */
+
+/* Slightly larger base text for comfortable reading */
+html { font-size: 17px; }
+
+/* Brighter secondary text for better contrast */
+:root { --muted: #a7b2c5; }
+
+/* Keep reading lines at a comfortable length */
+.expectations .qa-block p { max-width: 75ch; font-size: 1.02rem; }
+.about-grid p, .page-header p { max-width: 65ch; }
+
+/* Bump up the smallest text sizes */
+.tag { font-size: .87rem; }
+.chip { font-size: .87rem; }
+.card-body p { font-size: .97rem; }
+.card-meta { font-size: .82rem; }
+.card-link { font-size: .95rem; }
+.contact-card p, .contact-card a { font-size: .95rem; }
+.breadcrumb { font-size: .9rem; }
+footer { font-size: .93rem; }

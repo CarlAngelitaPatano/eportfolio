@@ -43,8 +43,8 @@
           (Elective 4). Exercises, activities, and outputs for the course are posted here
           as they are completed.
         </p>
-        <div class="cta-row" style="margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-          <a class="btn btn-primary" href="https://github.com/CarlAngelitaPatano/eportfolio/upload/main/works" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>Upload Work File</a>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/CarlAngelitaPatano/eportfolio/upload/main/works" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>Upload Work File</a>
         </div>
       </div>
     </header>
@@ -99,19 +99,6 @@
     up.innerHTML = '<div class="card-body"><span class="card-meta">Upcoming</span><h3>Future Activities</h3><p>Additional course outputs such as laboratory exercises, written works, and performance tasks will be documented here throughout the semester.</p></div>';
     grid.appendChild(up);
   </script>
-  <script>
-    // Scroll reveal
-    const revealTargets = document.querySelectorAll(".card, .section-title, .section-sub");
-    revealTargets.forEach(el => el.classList.add("reveal"));
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    revealTargets.forEach(el => io.observe(el));
-
-    // Back to top
-    const toTop = document.getElementById("toTop");
-    window.addEventListener("scroll", () => toTop.classList.toggle("show", window.scrollY > 500), { passive: true });
-    toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
