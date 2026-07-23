@@ -11,6 +11,22 @@
 
 const RECORDS = [
   {
+    tag: "Written Work · WW-P2",
+    title: "IEEE-Formatted Reflection Report on NLP",
+    date: "July 2026",
+    description: "An IEEE-formatted reflection paper titled \"A Student Reflection on the Foundations of Natural Language Processing: From Tokenization to Semantic Embeddings.\" It discusses what I learned in each stage of text analysis — tokenization, word counting and TF-IDF weighting, and vector models that capture meaning — along with my observations from the hands-on activity and how these fundamentals will support my future subjects, laboratory work, and capstone.",
+    link: "works/IEEE-Reflection-Report-NLP.pdf",
+    linkText: "View Report (PDF) →"
+  },
+  {
+    tag: "Laboratory Exercise · WW-P2",
+    title: "Introduction to NLP Module",
+    date: "July 2026",
+    description: "A hands-on module and lab exercise introducing the foundations of Natural Language Processing. It covered NLP goals and applications, tokenization and preprocessing (stemming vs. lemmatization, noise removal), statistical text analysis with TF-IDF and N-grams, semantic language models and word embeddings, and an interactive text analytics exercise, completed with a knowledge check and module completion proof.",
+    link: "works/WW-P2-Introduction-to-NLP.pdf",
+    linkText: "View Completion Proof (PDF) →"
+  },
+  {
     tag: "Written Work · WW-P1",
     title: "Creating My ePortfolio",
     date: "July 2026",
