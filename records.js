@@ -11,6 +11,16 @@
 
 const RECORDS = [
   {
+    tag: "Performance Task · PT-P1",
+    title: "No-Code Neural Network Text Classification",
+    date: "July 2026",
+    description: "A controlled experiment building a no-code neural text classifier on the Machine Learning for Kids platform to sort telecom support messages into three intents: Positive Praise, Negative Complaint, and Urgent Support. Three models were trained on the same held-out test set. Accuracy rose from 63.64% (baseline) to 72.73% (doubled data) to 90.91% (failure-targeted examples), showing that how well the data represents real input matters more than sheer dataset size. Includes a full IEEE report and a spreadsheet with per-run accuracy, precision, recall, F1, and confusion matrices.",
+    link: "works/PTP1-IEEE-Report-Text-Classification.pdf",
+    linkText: "View IEEE Report (PDF) →",
+    link2: "works/PTP1-Performance-Computations.xlsx",
+    linkText2: "View Computations (XLSX) →"
+  },
+  {
     tag: "Written Work · WW-P2",
     title: "IEEE-Formatted Reflection Report on NLP",
     date: "July 2026",
