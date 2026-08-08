@@ -11,6 +11,18 @@
 
 const RECORDS = [
   {
+    tag: "Performance Task · PT-P2",
+    title: "Neural Network Hyperparameter Tuning in Keras",
+    date: "August 2026",
+    description: "A controlled study reimplementing the PT-P1 intent classifier in TensorFlow/Keras with full control over the learning process. Seven training runs under a fixed random seed varied dataset size, hidden dimension, learning rate, dropout, weight decay, and training length. Dataset size proved decisive: expanding the corpus from 40 to 225 examples moved validation macro F1 from 0.095 to 0.939 and ROC-AUC from 0.33 to 0.999. The study diagnoses underfitting, overfitting, and regularization through loss-curve analysis, and honestly reports how the choice of evaluation set — random split vs. adversarial phrases — changes which model looks superior. Includes the IEEE report, the full training log, and the Colab notebook.",
+    link: "works/PTP2-IEEE-Report-Keras-Tuning.pdf",
+    linkText: "View IEEE Report (PDF) →",
+    link2: "works/PTP2-FFBP-Training-Log.xlsx",
+    linkText2: "View Training Log (XLSX) →",
+    link3: "works/PTP2-Neural-Network-Training-Testing.ipynb",
+    linkText3: "View Notebook (IPYNB) →"
+  },
+  {
     tag: "Performance Task · PT-P1",
     title: "No-Code Neural Network Text Classification",
     date: "July 2026",
