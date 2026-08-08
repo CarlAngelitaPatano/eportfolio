@@ -1,4 +1,4 @@
-# Carl Angelo Patano — ePortfolio (ITC-C508 / Elective 4)
+ # Carl Angelo Patano — ePortfolio (ITC-C508 / Elective 4)
 
 A static ePortfolio site. No build step needed — just HTML, CSS, and SVG assets.
 
