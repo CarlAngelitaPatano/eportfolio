@@ -24,4 +24,4 @@ A static ePortfolio site. No build step needed — just HTML, CSS, and SVG asset
 - Fill in your real projects in the Projects section (`index.html`).
 - Update the GitHub link in the Contact section.
 - **Important:** Review the Course Expectations answers and rewrite them in your own
-  words based on your two required readings — the drafts are a starting point only.
+  words based on your two required readings — the drafts are a starting point only.  
