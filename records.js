@@ -11,6 +11,16 @@
 
 const RECORDS = [
   {
+    tag: "Midterm · Performance Task PT-M1",
+    title: "Domain-Specific RAG Chatbot for Mandaluyong Tourism",
+    date: "September 2026",
+    description: "A Retrieval-Augmented Generation (RAG) chatbot built over a constructed municipal tourism corpus for Mandaluyong. The pipeline chunks three source documents into 37 passages, embeds them with all-MiniLM-L6-v2 into an in-memory ChromaDB, retrieves the three nearest passages per query, and generates grounded answers with a Groq-hosted LLM. A controlled hallucination stress-test raised temperature from 0 to 1.0 and removed the refusal clause while holding everything else constant. The study honestly reports a negative result — the model still refused all out-of-domain queries because a grounding constraint was conflated with the refusal clause — and proposes an ablation to separate them. Includes the IEEE report and the Colab notebook.",
+    link: "works/PTM1-IEEE-Report-RAG-Chatbot.pdf",
+    linkText: "View IEEE Report (PDF) →",
+    link2: "works/PTM1-RAG-Mandaluyong-Notebook.ipynb",
+    linkText2: "View Notebook (IPYNB) →"
+  },
+  {
     tag: "Performance Task · PT-P2",
     title: "Neural Network Hyperparameter Tuning in Keras",
     date: "August 2026",
