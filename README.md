@@ -1,4 +1,4 @@
-# Carl Angelo Patano — ePortfolio (ITC-C508 / Elective 4)
+ # Carl Angelo Patano — ePortfolio (ITC-C508 / Elective 4)
 
 A static ePortfolio site. No build step needed — just HTML, CSS, and SVG assets.
 
@@ -7,6 +7,7 @@ A static ePortfolio site. No build step needed — just HTML, CSS, and SVG asset
 - `itc-c508.html` — ITC-C508 course records page
 - `style.css` — shared styles (dark theme)
 - `assets/` — placeholder images (replace with your own photos/screenshots)
+- 
 
 ## Deploy: GitHub + Vercel
 
@@ -24,4 +25,4 @@ A static ePortfolio site. No build step needed — just HTML, CSS, and SVG asset
 - Fill in your real projects in the Projects section (`index.html`).
 - Update the GitHub link in the Contact section.
 - **Important:** Review the Course Expectations answers and rewrite them in your own
-  words based on your two required readings — the drafts are a starting point only.
+  words based on your two required readings — the drafts are a starting point only.  
