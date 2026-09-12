@@ -76,7 +76,7 @@
 
   <button class="to-top" id="toTop" aria-label="Back to top">&uarr;</button>
 
-  <script src="records.js?v=7"></script>
+  <script src="records.js?v=8"></script>
   <script>
     // Render records from records.js
     const grid = document.getElementById("recordsGrid");
@@ -87,8 +87,9 @@
         '<div class="card-body">' +
           '<span class="card-meta">' + r.tag + '</span>' +
           '<h3>' + r.title + '</h3>' +
-          (r.date ? '<p style="color:var(--accent-2);font-size:.85rem;margin:0;">' + r.date + '</p>' : '') +
+          ((r.author || r.date) ? '<p class="card-byline">' + [r.author, r.date].filter(Boolean).join(' &middot; ') + '</p>' : '') +
           '<p>' + r.description + '</p>' +
+          (r.reflection ? '<div class="card-reflection"><span class="reflection-label">My Reflection</span><p>' + r.reflection + '</p></div>' : '') +
           (r.link ? '<a class="card-link" href="' + r.link + '">' + r.linkText + '</a>' : '') +
           (r.link2 ? '<a class="card-link" href="' + r.link2 + '">' + r.linkText2 + '</a>' : '') +
           (r.link3 ? '<a class="card-link" href="' + r.link3 + '">' + r.linkText3 + '</a>' : '') +
